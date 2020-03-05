@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    position: relative;
+}
+
+.box{
+    padding: 7px;
+    float: left;
+    background-color: blueviolet;
+    border: red solid 3px;
+}
+
+.pic{
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #cccccc;
+    background-color: yellow;
+    width: 8rem;
+
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+}

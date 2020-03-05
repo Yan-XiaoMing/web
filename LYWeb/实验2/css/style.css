@@ -1,0 +1,80 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+img{
+    position: absolute;
+    width: 1400px;
+    opacity: 0.3;
+}
+.header-up-block{
+    height: 18px;
+}
+.header{
+    text-transform: uppercase;
+    color: inherit;
+    font-family: 'Lucida Sans';
+    font-size: 18px;
+    
+}
+.heider-down-block{
+    height: 18px;
+    border-bottom: 1px solid rgba(0, 0,0,.05);
+}
+
+.card-msg{
+    text-align: left;
+    text-indent: 46px;
+}
+
+.body-up-block{
+    height: 43px;
+    background: red;
+}
+#up-title-block{
+    height: 3px;
+}
+.up-title p{
+    font-weight:500;
+    margin: 0;
+    font-size: 17px;
+    color: rgba(0, 0,0,.054);
+}
+#title-block{
+    height: 6px;
+}
+.title{
+    font-family:medium-content-sans-serif-font ;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+.title h2{
+    margin: 0;
+}
+.msg{
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: .7px;
+}
+#msg-down-block{
+    height: 3.5px;
+}
+.msg-down{
+    font-family:medium-content-sans-serif-font ;
+}
+.msg-down p{
+    margin:0;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+.start{
+
+}
+#start-block{
+    height: 4px;
+}
+.start p{
+    margin: 0;
+    font-size: 16px;
+    /* color: rgba(0, 0,0,.054); */
+}
