@@ -17,19 +17,14 @@ img{
     font-size: 18px;
     
 }
-.heider-down-block{
+.header-down-block{
     height: 18px;
-    border-bottom: 1px solid rgba(0, 0,0,.05);
-}
-
-.card-msg{
-    text-align: left;
-    text-indent: 46px;
+    border-bottom:  1px solid rgba(0, 0,0,.1);
 }
 
 .body-up-block{
     height: 43px;
-    background: red;
+  
 }
 #up-title-block{
     height: 3px;
@@ -38,10 +33,10 @@ img{
     font-weight:500;
     margin: 0;
     font-size: 17px;
-    color: rgba(0, 0,0,.054);
+    color: rgba(0, 0,0,.5);
 }
 #title-block{
-    height: 6px;
+    height: 8px;
 }
 .title{
     font-family:medium-content-sans-serif-font ;
@@ -57,7 +52,7 @@ img{
     letter-spacing: .7px;
 }
 #msg-down-block{
-    height: 3.5px;
+    height: 7px;
 }
 .msg-down{
     font-family:medium-content-sans-serif-font ;
@@ -67,14 +62,60 @@ img{
     text-transform: capitalize;
     letter-spacing: 0;
 }
-.start{
 
+
+#star-block{
+    height: 5px;
 }
-#start-block{
-    height: 4px;
-}
-.start p{
+.star p{
     margin: 0;
     font-size: 16px;
     /* color: rgba(0, 0,0,.054); */
 }
+.left{
+    width: 60%;
+    
+}
+
+.card{
+    width: 75%;
+    position: relative;
+    min-height: 28vh;
+}
+
+.card-msg{
+    text-align: left;
+    text-indent: 85px;
+}
+
+.card-left{
+   position: absolute;
+   width: 100%;
+}
+.card-right{
+    margin-left: 112%;
+}
+
+.card-down{
+    display: inline-block;
+}
+
+.icon-wrapper{
+    display: inline-block;
+    width: 48%;
+}
+.icon{
+    float: right;
+}
+.icon>span{
+    margin-right: 5px;
+}
+.icon>span>i{
+    font-size: 27px!important;
+}
+
+.card-right img{
+    width: 175px;
+    opacity: 1;
+}
+.right
