@@ -74,7 +74,7 @@ img{
 }
 .left{
     width: 60%;
-    
+    display: inline-block;
 }
 
 .card{
@@ -101,8 +101,8 @@ img{
 }
 
 .icon-wrapper{
-    display: inline-block;
-    width: 48%;
+   float: right;
+   margin-top: 25px;
 }
 .icon{
     float: right;
@@ -116,6 +116,63 @@ img{
 
 .card-right img{
     width: 175px;
+    height: 176.68px;
     opacity: 1;
 }
-.right
+.right{
+    display: inline-block;
+    position: fixed;
+    margin-left: 130px;
+}
+.right .right-title h2{
+    font-size: 24px;
+    font-weight: 600;
+    padding:15px ;
+    border-bottom: 1px solid rgba(0,0,0,.15)
+}
+.right-list{
+    list-style: none;
+    padding: 25px;
+}
+ol li{
+    min-height: 21vh;
+    margin-bottom: 10px;
+}
+ol li::after{
+    
+    clear: left;
+}
+.list-left{
+    float: left;
+    min-height: 21vh;
+    margin-right: 16px;
+    font-size: 34px;
+    color: rgba(0,0,0,.15);
+    fill: rgba(0,0,0,.15);
+}
+.list-right{
+    width: 86%;
+    
+}
+.list-body{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.list-right h2{
+    margin: 0;
+}
+
+.foot-body{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+.foot-star{
+    color: rgba(0,0,0,.54);
+    fill: rgba(0,0,0,.54);
+}
+.foot-star p{
+    margin: 0;
+}
