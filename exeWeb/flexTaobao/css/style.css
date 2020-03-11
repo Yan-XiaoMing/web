@@ -73,21 +73,24 @@
   flex-direction: row;
 }
 .body .icon-componet .icon-wrapper {
-  margin-left: 11.5px;
+  margin-left: 2%;
+  width: 20%;
+  box-sizing: border-box;
 }
 .body .icon-componet .icon-wrapper .icon-top,
 .body .icon-componet .icon-wrapper .icon-down {
   display: flex;
   flex-direction: column;
-  height: 67px;
-  width: 61px;
+  height: auto;
+  width: 100%;
   margin-top: 3px;
+  box-sizing: border-box;
   align-items: center;
 }
 .body .icon-componet .icon-wrapper .icon-top img,
 .body .icon-componet .icon-wrapper .icon-down img {
-  height: 48px;
-  width: 61px;
+  height: auto;
+  width: 100%;
 }
 .body .icon-componet .icon-wrapper .icon-top p,
 .body .icon-componet .icon-wrapper .icon-down p {
