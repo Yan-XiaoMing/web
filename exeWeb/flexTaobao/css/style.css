@@ -3,12 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 10000;
+}
 .header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background: #ff852a;
   padding: 7px 9px 7px 0px;
+  height: 40px;
 }
 .header .header-logo {
   flex: 1;
@@ -37,6 +45,9 @@
   margin: auto;
   font-weight: 400;
   font-size: 0.9em;
+}
+.body {
+  padding-top: 40px;
 }
 .body .swiper-container {
   height: 120px;
