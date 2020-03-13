@@ -4,11 +4,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  background: #1e2022;
+  height: 100%;
+}
 .root {
   width: 100%;
-  background: #1e2022;
+  height: 100%;
+  margin: 0 auto;
 }
-.root header {
+.root .header {
   width: 100%;
   height: 1.2rem;
   box-shadow: 0 1px 0 0 rgba(25, 31, 37, 0.12);
@@ -16,13 +22,14 @@
   justify-content: center;
   display: flex;
 }
-.root header .tag-wrapper {
+.root .header .tag-wrapper {
   width: 24rem;
   align-items: center;
   display: flex;
   height: 100%;
+  justify-content: flex-start;
 }
-.root header .tag-wrapper .logo {
+.root .header .tag-wrapper .logo {
   width: 1.48rem;
   height: 0.52rem;
   background-image: url("http://gw.alicdn.com/tfs/TB1HbmLbQ5E3KVjSZFCXXbuzXXa-124-44.png");
@@ -65,7 +72,7 @@
   display: flex;
 }
 .root .body .body-main .main-left {
-  flex: 1;
+  flex: 2;
 }
 .root .body .body-main .main-left .video-wrapper {
   height: 9rem;
@@ -94,6 +101,7 @@
   font-size: 0.24rem;
 }
 .root .body .body-main .main-right {
+  flex: 1;
   width: 8rem;
   height: 10.04rem;
   background: #2c2d2f;
@@ -118,11 +126,8 @@
   text-align: center;
 }
 .root .body .body-main .main-right .right-body {
-  position: absolute;
-  left: 0;
-  top: 1rem;
-  bottom: 1.1rem;
-  padding: 0 0.24rem;
+  margin-top: 0.1rem;
+  padding: 0.2rem 0.24rem;
   max-height: 80%;
 }
 .root .body .body-main .main-right .right-body .msg-wrapper {
@@ -152,10 +157,10 @@
 }
 .root .body .body-main .main-right .right-foot {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: flex;
   padding: 0.2rem;
+  bottom: 0rem;
+  width: 100%;
 }
 .root .body .body-main .main-right .right-foot .foot-msg {
   display: flex;
@@ -166,7 +171,7 @@
 .root .body .body-main .main-right .right-foot .foot-msg .input-wrapper {
   height: 0.64rem;
   line-height: 0.64rem;
-  flex: 1;
+  flex: 2;
   padding: 0 0.34rem;
   border-radius: 0.38rem 0 0 0.38rem;
   background: #1e2022;
@@ -178,6 +183,7 @@
   padding: 0;
 }
 .root .body .body-main .main-right .right-foot .foot-msg .send {
+  flex: 1;
   padding: 0 0.24rem;
   color: hsla(0, 0%, 100%, 0.48);
   text-align: center;
@@ -188,10 +194,6 @@
   font-size: 0.24rem;
 }
 .root .body .body-main .main-right .right-foot .foot-img {
-  position: absolute;
-  bottom: 0.2rem;
-  right: 0.24rem;
-  z-index: 2;
   cursor: pointer;
 }
 .root .body .body-main .main-right .right-foot .foot-img .foot-img-wrapper {
@@ -206,11 +208,63 @@
   background-size: 100% 100%;
   background-position: 50%;
 }
-@media all and (min-width: 1024px) {
-  header {
-    height: 120px;
-  }
-  .body-main {
+@media all and (max-width: 1250px) {
+  .root {
+    width: 100%;
+    display: flex;
     flex-direction: column;
+  }
+  .root .logo {
+    margin-left: 0.2rem;
+  }
+  .root .body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+  .root .body .body-title {
+    display: none;
+  }
+  .root .body .body-main {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .root .body .body-main .main-left {
+    flex: 0;
+    width: 100%;
+    height: auto;
+  }
+  .root .body .body-main .main-left .video-wrapper {
+    max-width: 100%;
+    height: auto;
+  }
+  .root .body .body-main .main-left .left-down {
+    display: none;
+  }
+  .root .body .body-main .main-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .root .body .body-main .main-right .right-body {
+    margin-bottom: 38px;
+  }
+  .root .body .body-main .main-right .right-foot {
+    bottom: 0;
+    display: flex;
+  }
+  .root .body .body-main .main-right .right-foot .foot-msg {
+    flex: 9;
+  }
+  .root .body .body-main .main-right .right-foot .foot-msg .send {
+    flex: 0.3;
+    width: auto;
+  }
+  .root .body .body-main .main-right .right-foot .foot-img {
+    flex: 1 ;
   }
 }
