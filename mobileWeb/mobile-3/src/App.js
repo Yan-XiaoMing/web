@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
+import Login from './pages/login/Login'
 
 
 export default class App extends Component{
@@ -8,7 +9,7 @@ export default class App extends Component{
 
       <HashRouter>
         <Switch>
-          <Route path='/' component={}/>
+          <Route path='/' component={Login}/>
         </Switch>
       </HashRouter>
 
