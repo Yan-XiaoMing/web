@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css">
+    <link href="./style/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="header-text">
+                    这是张图片,好看吧?
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="title">
+                    思密马赛
+                    <div class="title-border"></div>
+                </div>
+                <article class="index">
+                    阿里嘎多,web课很爽 阿里嘎多,web课很爽 阿里嘎多,web课很爽 阿里嘎多,web课很爽 阿里嘎多,web课很爽 阿里嘎多,web课很爽 阿里嘎多,web课很爽 
+                </article>
+                <div class="header-btn">
+                    <span class="text">叩你脊瓦</span>
+                    <span class="iconfont icon-item">&#xe658;</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="main-header">
+                <div class="main-title">
+                    <div class="first-title">
+                        Blog
+                    </div>
+                    <div class="second-title">
+                        阿里马赛
+                    </div> 
+                </div>
+                <div class="header-btn main-item">
+                    <span class="text">叩你脊瓦</span>
+                    <span class="iconfont icon-item">&#xe658;</span>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-left ">
+            <div class="footer-title">
+                有问题打电话
+            </div>
+            <div class="footer-card ">
+                <div class="card-item-wrapper border-item">
+                    <div class="card-title">
+                        中央会计的电话
+                    </div>
+                    <div class="card-phone">
+                        <span>12306-10086</span>
+                    </div>
+                    <div class="text-wrapper">
+                        <div class="card-text">
+                            这是啥啊?这是啥啊?这是啥啊?这是啥啊?这是啥啊?
+                        </div> 
+                    </div>
+                </div>
+                <div class="end-title">
+                    受付时间 / 平日9:00 ~ 18:00
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-right ">
+            <div class="footer-title">
+                web课很奶思
+            </div>
+            <div class="footer-card ">
+                <div class="card-item-wrapper right-item">
+                    <div class="card-label">
+                        <span class="iconfont item">&#xe606; 这是一个你的邮件消息</span>
+                        <span class="iconfont arrow">&#xe658;</span>
+                    </div>
+                    <div class="text-wrapper">
+                        <div class="card-text">
+                            这是啥啊?这是啥啊?这是啥啊?这是啥啊?这是啥啊?
+                        </div> 
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const listData = [
+        {
+            data:"2020.03.25",
+            label:"赋税",
+            color:"#1e90ff",
+            text:"随便写点什么吧不知道写什么了"
+        },{
+            data:"2020.03.28",
+            label:"赋税·会计",
+            color:"yellowgreen",
+            text:"随便写点什么吧不知道写什么了"
+        },{
+            data:"2020.03.31",
+            label:"赋税·会计",
+            color:"yellowgreen",
+            text:"随便写点什么吧不知道写什么了"
+        }
+    ];
+    var listRoot = document.getElementsByClassName("main-container")[0];
+   
+    /**
+    * 这段代码写的是真的垃圾笨重,有什么好的优化方案吗?求告知
+    */
+    
+    for(let item in listData){
+        let mainList = document.createElement("div")
+            mainList.className = "main-list";
+        let spanItem = document.createElement("span");
+        let spanSpecial = document.createElement("span");
+        let endItem = document.createElement("span");
+
+        spanItem.className = "time";
+        spanItem.innerText = listData[item].data;
+        mainList.appendChild(spanItem);
+        
+        spanSpecial.className = "list-label";
+        spanSpecial.innerText = listData[item].label;
+        spanSpecial.style.background = listData[item].color;
+        mainList.appendChild(spanSpecial);
+
+        endItem.className = "article";
+        endItem.innerText = listData[item].text;
+        mainList.appendChild(endItem);
+        
+        listRoot.appendChild(mainList);
+        console.log(listRoot);
+    }
+</script>
+</html>
