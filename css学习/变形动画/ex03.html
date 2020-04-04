@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+    
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+        }
+        main {
+            background: #eb4d4b;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transition: 2s;
+            transform: perspective(900px) rotateY(60deg);
+        }
+        body:hover main{
+            transform: perspective(900px) rotateY(60deg) translateZ(100px);
+        }
+        /* div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .f{
+            background-color: #eb4d4b;
+        }
+        .b{
+            background-color: #badc58;
+            transform: translateZ(-100px);
+        } */
+    </style>
+</head>
+<body>
+    <main>
+        <div class="f"></div>
+        <div class="b"></div>
+    </main>
+</body>
+</html>

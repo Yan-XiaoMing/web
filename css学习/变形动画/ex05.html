@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+        }
+        main{
+            position: relative;
+            background: #f3f3f3;
+            flex: 1;
+            overflow: hidden;
+        }
+        main>div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform:translate(0,-100%);
+            color: white;
+            font-size: 3em;
+            transition: 1s;
+        }
+        main>div:target{
+            opacity: 1;
+            transform:translate(0%,0%);
+        }
+        main>div:nth-of-type(1):target{
+            background: #4cd137;
+        }
+        main>div:nth-of-type(2):target{
+            background: #00a8ff;
+        }
+        main>div:nth-of-type(3):target{
+            background: #fbc531;
+        }
+        
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 8vh;
+            text-align: center;
+            background: #2f3640;
+        }
+        nav a{
+            flex: 1;
+            font-size: 1.3em;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            font-weight: bold;
+            opacity: .8;
+            color:white
+        }
+        nav a:nth-child(2){
+            border-left: 1px solid #aaaaaa;
+            border-right: 1px solid #aaaaaa;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="home">
+            <span class="glyphicon glyphicon-home"></span>
+            Home
+        </div>
+        <div id="video">
+            <span class="glyphicon glyphicon-apple"></span>
+            Video
+        </div>
+        <div id="live">
+            <span class="glyphicon glyphicon-phone-alt"></span>
+            Live
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <a href="#home">home</a>
+            <a href="#video">video</a>
+            <a href="#live">live</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

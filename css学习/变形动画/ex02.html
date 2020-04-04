@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border: 5px solid silver;
+        }
+        article div{
+            width: 100px;
+            height: 100px;
+            background: blueviolet;
+            box-sizing: border-box;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+        }
+        article div:nth-child(1){
+            background-color: #e9dddd;
+        }
+        article div:nth-child(2){
+            transform: translateX(50%);
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div></div>
+        <div></div>
+    </article>
+</body>
+</html>
