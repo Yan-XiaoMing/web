@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        body {
+            width: 100vw;
+            height:
+                100vh;
+            background: #34495e;
+        }
+
+        main{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+        }
+        ul{
+            list-style: none;
+            width: 200px;
+            display: flex;
+            justify-content: space-around;
+        }
+        ul li {
+            position: relative;
+        }
+        ul li strong{
+            background-color: #e67e22;
+            color: #2c3e50;
+            padding: 2px 20px;
+            cursor: pointer;
+            text-transform:uppercase;
+        }
+
+        ul li strong+div{
+            width: 100%;
+            border: 2px solid #e67e22;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            transform-origin: left top;
+            transform: scale(0);
+            transition: 1s;
+            background: #e67e22;
+            text-align: center;
+        }
+        ul li strong+div a {
+        display: inline-block;
+        padding: 5px;
+        font-size: 1em;
+        color: #2c3e50;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    ul li:hover strong+div {
+        transform: scale(1);
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <ul>
+            <li>
+                <strong>VIDEO</strong>
+                <div>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                </div>
+            </li>
+            <li>
+                <strong>LIVE</strong>
+                <div>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>

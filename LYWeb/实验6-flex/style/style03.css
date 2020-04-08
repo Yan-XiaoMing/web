@@ -1,0 +1,88 @@
+main {
+  width: 100vw;
+  height: 100vh;
+}
+.g-wrapper {
+  background: #f1f2f6;
+  width: 750px;
+  height: 680px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.g-container {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 320px;
+  margin: 5px;
+  margin-bottom: 10px;
+  background: white;
+}
+.g-img {
+  width: 100%;
+  height: 220px;
+}
+.g-img > img {
+  width: 100%;
+  height: 100%;
+}
+.g-index {
+  border-top: 1px solid black;
+  height: 90px;
+}
+.g-index .u-main {
+  display: flex;
+  height: 20px;
+  margin: 5px;
+  align-items: center;
+}
+.g-index .u-main .m-label {
+  margin-left: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.g-index .u-main .m-label .m-title {
+  font-size: 14px;
+}
+.g-index .u-main .m-label .m-text {
+  font-size: 14px;
+  color: crimson;
+}
+.g-index .u-main .m-label .m-text-after {
+  font-size: 14px;
+  color: #a4b0be;
+}
+.g-index .u-end {
+  height: 30px;
+  margin: 5px;
+}
+.g-index .u-end .m-label {
+  height: 100%;
+  margin-left: 8px;
+  margin-right: 8px;
+  display: flex;
+  align-items: flex-end;
+}
+.g-index .u-end .m-label > span {
+  display: block;
+}
+.g-index .u-end .m-symbol,
+.g-index .u-end .m-money {
+  color: orangered;
+  font-weight: 600;
+}
+.g-index .u-end .m-money {
+  font-size: 24px;
+  color: orangered;
+}
+.g-index .u-end .m-origin-money {
+  font-size: 12px;
+  margin-left: 10px;
+  text-decoration: line-through;
+  margin-right: auto;
+}
+.g-index .u-end .m-sell {
+  font-size: 12px;
+}

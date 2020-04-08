@@ -1,0 +1,89 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    background: #2ed573;
+}
+
+
+
+.g-index {
+    width: 800px;
+    height: 600px;
+    background: #70a1ff;
+}
+
+.g-mn {
+    width: 760px;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    overflow: hidden;
+
+    .g-hd {
+        height: 120px;
+        padding: 20px;
+        background: #2ed573;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+
+        .u-item {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background: #70a1ff;
+            border: 1px black solid;
+        }
+    }
+    .g-hd>div:nth-child(4) {
+        margin-right: auto;
+    }
+    .g-hd>div:last-child {
+        margin-right: 0;
+    }
+    .g-bd {
+        height: 420px;
+        box-sizing: border-box;
+        background: #2ed573;
+        padding: 20px;
+        .m-container{
+            display: flex;
+            height: 100%;
+            .m-left{
+                height: 100%;
+                padding-right: 20px;
+                flex: 1;
+                .u-bd{
+                    margin-bottom: 20px;
+                    height: 300px;
+                    background: #70a1ff;
+                }
+                .u-ft-container{
+                    display: flex;
+                    .u-ft-item{
+                        width: 50px;
+                        height: 50px;
+                        background: #70a1ff;
+                        margin-right: 25px;
+                    }
+                }
+                .u-ft-container>div:last-child{
+                    margin-right: 0;
+                }
+            }
+            .m-right{
+                flex: 3;
+                padding-left: 20px;
+                .u-list{
+                    width: 480px;
+                    height: 40px;
+                    margin-bottom: 15px;
+                    background: #70a1ff;
+                }
+            }
+        }
+    }
+}
+
