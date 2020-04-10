@@ -1,9 +1,11 @@
-header {
-    height: 70px;
-    background: #353644;
-    display: flex;
-    flex-direction: row;
+@font-face{
+    font-family:'newChinese';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../chinese.woff') format('woff');
 }
+
+
 
 header .m-logo {
     padding: 0 15px;
@@ -64,7 +66,13 @@ header .m-logo span{
     width: 150px;
     z-index: 101;
 }
-
+header {
+    height: 70px;
+    background: #353644;
+    display: flex;
+    flex-direction: row;
+    font-family: '方正舒体';
+}
 .nav-item .items::before {
     content: '';
     border-width: 6px;
