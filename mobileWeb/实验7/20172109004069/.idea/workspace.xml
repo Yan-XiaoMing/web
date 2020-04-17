@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2411d278-0b56-46be-866f-5bcec4284c87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/page/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/dist/658af3847fca0f13cd7173c45cc38584.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/dist/dea8b7810fd6ddb195f988cefaf09639.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/dist/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/dist/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/dist/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/assets/superman.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/assets/webpack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/style.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/style/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/src/style/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LYWeb/实验7-Alice/2017210904069/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mobile-3/src/pages/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../mobile-3/src/pages/login/Login.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1afWbMMIpzQy7IbMv4Mr1qsFrP3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../antd-pro" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2411d278-0b56-46be-866f-5bcec4284c87" name="Default Changelist" comment="" />
+      <created>1587127198622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587127198622</updated>
+      <workItem from="1587127201722" duration="3602000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../antd-pro/node_modules/cross-port-killer/test/test.js" />
+        <option value="$PROJECT_DIR$/../antd-pro/node_modules/cross-port-killer/test/test.d.ts" />
+        <option value="$PROJECT_DIR$/../antd-pro/node_modules/umi-utils/src/index.d.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="896" y="243" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587129172519">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="896" y="243" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1587129172519" />
+    <state x="879" y="187" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587127240141">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="879" y="187" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587127240141" />
+    <state x="929" y="196" key="FileChooserDialogImpl" timestamp="1587130983137">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="929" y="196" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587130983137" />
+    <state width="748" height="208" key="GridCell.Tab.0.bottom" timestamp="1587130139980">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="748" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587130139980" />
+    <state width="748" height="208" key="GridCell.Tab.0.center" timestamp="1587130139980">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="748" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587130139980" />
+    <state width="748" height="208" key="GridCell.Tab.0.left" timestamp="1587130139979">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="748" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587130139979" />
+    <state width="748" height="208" key="GridCell.Tab.0.right" timestamp="1587130139980">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="748" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587130139980" />
+  </component>
+</project>
