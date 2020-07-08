@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        position: relative;
+        border: 1px solid salmon;
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sticker {
+        cursor: pointer;
+        width: 200px;
+        height: 200px;
+        background: url(https://www.w3cplus.com/sites/default/files/blogs/2015/1506/sticker.png)
+          0 0 no-repeat;
+        animation: circleRotate 10s linear infinite;
+        animation-play-state: paused;
+      }
+      .sticker:hover {
+        animation-play-state: running;
+      }
+      .msg {
+        position: absolute;
+        z-index: 1;
+        color: whitesmoke;
+        text-align: monospaced;
+        font-size: 1.6em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none; 
+      }
+
+      @keyframes circleRotate {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="sticker"></div>
+      <span class="msg">MIAI-FE</span>
+    </div>
+  </body>
+</html>
