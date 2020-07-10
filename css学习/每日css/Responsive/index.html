@@ -35,6 +35,25 @@
         </ul>
     </section>
     <span class="menuicon" id="toggle" onclick="menuToggle()"></span>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.getRegistrations()
+                .then(regs=>{
+                    for(let reg of regs){
+                        reg.unregister()
+                    }
+                    navigator.serviceWorker.register('./sw.js')
+                        .then(reg=>{
+                            setInterval(()=>{
+                                reg.update()
+                            },60*60*1000)
+                        })
+                })
+        }
+        else{
+            console.log('serviceWorker not in navigator')
+        }
+    </script>
     <script type="text/javascript">
         function menuToggle(){
             var nav = document.getElementById("nav");
