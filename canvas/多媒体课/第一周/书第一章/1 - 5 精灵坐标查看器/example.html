@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sprite sheets</title>
+    <style>
+        body{
+            background: #dddddd;
+        }
+        #canvas{
+            position: absolute;
+            left: 0px;
+            top: 20px;
+            margin: 20px;
+            background: #ffffff;
+            border: thin inset rgba(100, 150,230, 0.5);
+            cursor: pointer;
+        }
+        #readout{
+            margin-top: 10px;
+            margin-left: 15px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="readout"></div>
+
+    <canvas id="canvas" width="500" height="250">
+        Canvas not supported
+    </canvas>
+
+    <script src="example.js"></script>
+</body>
+</html>
