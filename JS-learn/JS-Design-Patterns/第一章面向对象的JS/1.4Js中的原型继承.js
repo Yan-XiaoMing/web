@@ -76,3 +76,6 @@ B.prototype = new A()
 
 var b = new B();
 console.log(b.name) // sven
+
+//原型链并不是无限长的
+//构造器原型Object.prototype
