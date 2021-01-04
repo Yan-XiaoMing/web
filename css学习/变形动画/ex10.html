@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hue-rotate</title>
+    <style>
+        .brid{
+            width: 300px;
+            height: 232px;
+            background: url(./img/piece-bird.png) no-repeat;
+            background-size: contain;
+            animation: pulse 5s linear infinite;
+        }
+        @keyframes pulse{
+            from{
+                filter: hue-rotate(0) saturate(0);
+            }
+            to{
+                filter: hue-rotate(360deg) saturate(500%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="brid"></div>
+</body>
+</html>

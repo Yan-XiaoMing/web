@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce</title>
+    <style>
+         #container{
+            width: 100%; height: 200px; line-height: 200px; text-align: center; color: #fff; background-color: #444; font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        /*
+            防抖(debounce)：触发高频事件后 n 秒内函数只会执行一次，如果 n 秒内高频事件再次被触发，则重新计算时间
+            举例：就好像在百度搜索时，每次输入之后都有联想词弹出，这个控制联想词的方法就不可能是输入框内容一改变就触发的，
+            他一定是当你结束输入一段时间之后才会触发
+        */
+        // 初始代码
+        var count = 1;
+        var container = document.getElementById('container')
+        function getUserAction(){
+            container.innerHTML = count++
+        }
+        // container.onmousemove = getUserAction
+    </script>
+    <script>
+        //第一版
+        function debounce(func,wait){
+            var timeout;
+            return function(){
+                clearTimeout(timeout)
+                timeout = setTimeout(func,wait)
+            }
+        }
+        container.onmousemove = debounce(getUserAction,1000)
+    </script>
+    <script>
+        //第二版
+        /*
+            getUserAction中的this
+            在不适用debounce函数的时候指向的是
+            <div id="container"></div>
+
+            在debounce中调用getUserAction,this指向了window对象
+            所以我们需要将this指向正确的对象
+        */
+        function debounce(func,wait){
+            var timeout;
+            return function(){
+                var context = this
+                clearTimeout(timeout)
+                timeout = setTimeout(function(){
+                    func.apply(context)
+                },wait)
+            }
+        }
+    </script>
+    <script>
+        //js在事件处理函数中会提供事件对象event,修改getUserAction函数:
+        function getUserAction(e){
+            console.log(e)
+            container.innerHTML = count++
+        }
+        //如果我们不在debounce中调用将会打印MouseEvent对象
+        //但如果调用了debounce会打印undefined
+
+        //第三版
+        function debounce(func,wait){
+            var timeout
+            return function(){
+                var context = this
+                var args = arguments
+                clearTimeout(timeout)
+                timeout = setTimeout(function(){
+                    func.apply(context,args)
+                },wait)
+            }
+        }
+
+        //到此处修复了2个重要的问题
+        //1.this指向的问题
+        //2.event对象的问题
+    </script>
+    <script>
+        /*
+            我们假想一个新的需求:
+            这个函数我们不希望等到事件停止出发后执行,我们希望立即执行,
+            然后停止n秒后才能重新出发,
+            所以我们需要加上一个参数来标志是否立即执行
+        */
+        //第四版
+        function debounce(func,wait,immediate){
+            var timeout
+            return function(){
+                var context = this
+                var args = this
+                if(timeout){
+                    clearTimeout(timeout)
+                }
+                if(immediate){
+                    //如果执行过了就不执行了
+                    var callNow = !timeout
+                    timeout = setTimeout(function(){
+                        timeout = null
+                    },wait)
+                    if(callNow){
+                        func.apply(context,args)
+                    }
+                }
+                else{
+                    timeout = setTimeout(function(){
+                        func.apply(context,args)
+                    },wait)
+                }
+            }
+        }
+    </script>
+    <script>
+        //增加对返回值的处理
+        function debounce(func,wait,immediate){
+            var timeout,result
+            return function(){
+                var context = this
+                var args = arguments
+                if(timeout) clearTimeout(timeout)
+                if(immediate){
+                    var callNow = !timeout
+                    timeout = setTimeout(function(){
+                        timeout = null
+                    },wait)
+                    if(callNow) result = func.apply(context,args)
+                }
+                else{
+                    timeout = setTimeout(function(){
+                        func.apply(context,args)
+                    },wait)
+                }
+                return result
+            }
+        }
+    </script>
+    <script>
+        //每次执行完以后都需要等待10s,增加一个取消防抖的机制
+        function debounce(func,wait,immediate){
+            var timeout,result
+            var debounced = function(){
+                var context = this
+                var args = arguments
+                if(timeout) clearTimeout(timeout)
+                if(immediate){
+                    var callNow = !timeout
+                    timeout = setTimeout(function(){
+                        timeout = null
+                    },wait)
+                    if(callNow) result = func.apply(context,args)
+                }
+                else{
+                    timeout = setTimeout(function(){
+                        func.apply(context,args)
+                    },wait)
+                }
+                return result
+            }
+            debounced.cancel = function(){
+                clearTimeout(timeout)
+                timeout = null
+            }
+            return debounced
+        }
+
+        //cancel函数的使用
+        var count = 1;
+        var container = document.getElementById('container');
+        function getUserAction(e) {
+            container.innerHTML = count++;
+        };
+        var setUseAction = debounce(getUserAction, 10000, true);
+        container.onmousemove = setUseAction;
+        document.getElementById("button").addEventListener('click', function(){
+            setUseAction.cancel();
+        })
+    </script>
+</body>
+</html>

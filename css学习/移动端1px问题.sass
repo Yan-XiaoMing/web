@@ -1,0 +1,43 @@
+@function getVw($n) {
+  @return ($n/1080) * 100vw;
+}
+@function getVh($n) {
+  @return ($n/1920) * 100vh;
+}
+
+@mixin border-1px($border-width: 1px, $border-style: solid, $border-color: #ccc, $radius: null) {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    top: -50%;
+    bottom: -50%;
+    left: -50%;
+    right: -50%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    border-radius: $radius;
+    border-width: $border-width;
+    border-style: $border-style;
+    border-color: $border-color;
+    pointer-events: none;
+  }
+  @media (-webkit-min-device-pixel-radio: 2), (min-device-pixel-radio: 2) {
+    &::after {
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+      @if $radius != null {
+        border-radius: $radius * 2;
+      }
+    }
+  }
+  @media (-webkit-min-device-pixel-radio: 3), (min-device-pixel-radio: 3) {
+    &::after {
+      -webkit-transform: scaleY(0.33333333);
+      transform: scaleY(0.33333333);
+      @if $radius != null {
+        border-radius: $radius * 3;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./images/icon.png">
+    <meta charset="UTF-8">
+    <title>血战独树镇</title>
+    <style>
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+        #redArmyShow {
+            margin-top: 10px;
+            position: fixed;
+            margin-left: 33%;
+            display: none;
+        }
+
+        #armyFont {
+            /*padding-top: 30px;*/
+            padding-bottom: 50px;
+        }
+
+        #redArmy {
+            margin-left: 50px;
+        }
+
+        #canvas {
+            /*background-color: black;*/
+            position: fixed;
+            /*display: none;*/
+        }
+    </style>
+</head>
+<body>
+<div id="backgroundContainer" class="content"></div>
+<script src="./js/jquery-3.2.0.js"></script>
+<audio src="./audio/TheAvengers.mp3" loop autoplay id="avengers"></audio>
+<audio src="./audio/bboom.mp3" id="boom"></audio>
+<div id="redArmyShow">
+    <img id="armyFont" src="./images/breakOutFont.png">
+    <img id="redArmy" src="./images/armyRedmod.png">
+</div>
+<canvas id="canvas">您的浏览器不支持canvas</canvas>
+<script src="./js/requestNextAnimationFrame.js"></script>
+<script src="js/start.js"></script>
+</body>
+
+</html>

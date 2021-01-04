@@ -1,0 +1,55 @@
+*{
+    font-size: 50px;
+   margin: 0;
+   padding: 0;
+}
+html,body{
+    background: #ffffcc;
+    width: 100%;
+    height: 100%;
+}
+.page{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.header{
+    position: absolute;
+    background : #ccaa66;
+    top: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96%;
+    height: 2rem;
+    border: 1px solid black;
+}
+.main-body{
+    position: absolute;
+    bottom: 1.8rem;
+    width: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.left-nav{
+    height: 100%;
+  width: 200px;
+  float: left;
+  margin-bottom: 40px;
+  overflow: auto;
+}
+.index{
+    height: 100%;
+  margin-left: 0;
+   
+}
+.foot{
+    position: absolute;
+    background : #ccaa66;
+    border: 1px solid black;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96%;
+    height: 1.5rem;
+    bottom: 0.3rem;
+}
+

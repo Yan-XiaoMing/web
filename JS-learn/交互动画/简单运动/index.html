@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单运动</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        button{
+            width: 80px;
+            height:  40px;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">动画</button>
+    <div id = 'box'></div>
+</body>
+<script>
+    var btn = document.getElementById('btn')
+    var box = document.getElementById('box')
+    var num = 0
+    btn.onclick = function(){
+        setInterval(() => {
+            // num++;
+            
+            //1.处理边界
+            //2.定时器的管理
+            // box.style.left = num + 'px'
+            box.style.left = box.offsetLeft + 1 +'px'
+        }, 30);
+    }
+</script>
+</html>

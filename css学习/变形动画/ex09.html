@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div {
+            transition: 1s;
+            flex: 1;
+            margin: 20px;
+        }
+
+        main:hover div {
+            transform: scale(.8) translateY(-30px);
+            cursor: pointer;
+            filter: blur(15px);
+        }
+
+        main div:hover {
+            transform: scale(1.2);
+            color: white;
+            filter: none;
+            z-index: 2;
+        }
+
+       
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div><img src="./img/card_bg01.jpg" /></div>
+        <div><img src="./img/card_bg02.jpg" /></div>
+        <div><img src="./img/card_bg03.jpg" /></div>
+    </main>
+</body>
+
+</html>

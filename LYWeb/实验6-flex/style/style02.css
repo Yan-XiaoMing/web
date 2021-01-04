@@ -1,0 +1,67 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  background: #2ed573;
+}
+.g-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 390px;
+  height: 370px;
+  background: #eccc68;
+}
+.g-index {
+  border-top: 1px solid black;
+  height: 110px;
+  background: #1e90ff;
+}
+.g-index .u-main {
+  display: flex;
+  height: 20px;
+  background: #70a1ff;
+  margin: 10px;
+  align-items: center;
+}
+.g-index .u-main .m-label {
+  margin-left: 8px;
+}
+.g-index .u-main .m-label .m-title {
+  font-weight: 700;
+}
+.g-index .u-main .m-label .m-text {
+  color: crimson;
+  font-weight: 700;
+}
+.g-index .u-end {
+  height: 30px;
+  margin: 10px;
+  background: #70a1ff;
+}
+.g-index .u-end .m-label {
+  height: 100%;
+  margin-left: 8px;
+  margin-right: 8px;
+  display: flex;
+  align-items: flex-end;
+}
+.g-index .u-end .m-label > span {
+  display: block;
+}
+.g-index .u-end .m-symbol,
+.g-index .u-end .m-money {
+  color: crimson;
+  font-weight: 600;
+}
+.g-index .u-end .m-money {
+  font-size: 20px;
+}
+.g-index .u-end .m-origin-money {
+  font-size: 12px;
+  margin-left: 10px;
+  text-decoration: line-through;
+  margin-right: auto;
+}
+.g-index .u-end .m-sell {
+  font-size: 12px;
+}

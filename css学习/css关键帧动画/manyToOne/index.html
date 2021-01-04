@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f3f3f3;
+      }
+      .wrapper {
+        margin: 4em;
+      }
+
+      .mol {
+        width: 174px;
+        height: 174px;
+        background: transparent
+          url("https://www.w3cplus.com/sites/default/files/blogs/2015/1506/mol_badge.png")
+          top center no-repeat;
+        position: absolute;
+        left: 400px;
+        animation-name: roll-in, scale-up;
+        animation-duration: 3s, 1.75s;
+        animation-delay: 0s, 3s;
+        animation-timing-function: ease-in, linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes roll-in {
+        0% {
+          transform: translateX(-200px) rotate(0deg);
+        }
+        100% {
+          transform: translateX(0px) rotate(360deg);
+        }
+      }
+
+      @keyframes scale-up {
+        0% {
+          transform: scale(1);
+          animation-timing-function: ease-in;
+        }
+        25% {
+          transform: scale(1.15);
+          animation-timing-function: ease-out;
+        }
+        60% {
+          transform: scale(0.9);
+          animation-timing-function: ease-in;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        <div class="mol"></div>
+      </div>
+    </div>
+  </body>
+</html>

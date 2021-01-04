@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      .clip-img-w{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+      }
+      .clip-img-w img{
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .clip-img-w canvas{
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .clip-img-w #clipcanvas{
+        z-index: 2;
+      }
+      .clip-img-w #drawcanvas{
+        background: #fff;
+        z-index: 1;
+      }      
+      #img{
+        display: block;
+        margin: 0 auto;
+      }
+      .box-c{
+        width: 400px;
+        height: 200px;
+        border: 1px solid #F35252;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-c">
+      <div class="clip-img-w" id="clip-img-w">
+        <canvas id="drawcanvas" ></canvas>
+        <canvas id="clipcanvas" ></canvas>
+      </div>
+    </div>
+      
+    <!-- 结果 -->
+    <img src="" id="img">
+  </body>
+  <script type="text/javascript">
+    var img = document.getElementById("img");
+    var url = 'http://img.muchengfeng.cn/FvC7i-GkXYoHE7kGFlNfj7xEzvIQ';
+      
+    var wrap = document.getElementById("clip-img-w");
+    var width = wrap.offsetWidth;
+    var height = wrap.offsetHeight;
+    
+    var clipcanvas = document.getElementById("clipcanvas");
+    var drawcanvas = document.getElementById("drawcanvas");
+    clipcanvas.width = width;
+    clipcanvas.height = height;
+    drawcanvas.width = width;
+    drawcanvas.height = height;
+      
+  
+    var clipCtx = drawcanvas.getContext("2d");
+    var clipImg = document.createElement("img");
+    clipImg.crossOrigin = "anonymous";
+    clipImg.src = url;
+    var timg = clipImg.cloneNode();
+    wrap.appendChild(clipImg);
+    clipImg.onload = function(){
+      var x = Math.floor((width - this.width)/2);
+      var y = Math.floor((height - this.height)/2);
+      clipCtx.drawImage(this,0,0,timg.width,timg.height,x,y,this.width,this.height);
+    }
+      
+      
+    var ctx = clipcanvas.getContext("2d");
+    ctx.fillStyle = 'rgba(0,0,0,0.6)';
+    ctx.strokeStyle="green";
+    var start = null;
+    var clipArea = {};//裁剪范围
+      
+    clipcanvas.onmousedown = function(e){
+      start = {
+        x:e.offsetX,
+        y:e.offsetY
+      };
+    }
+    clipcanvas.onmousemove = function(e){
+      if(start){
+        fill(start.x,start.y,e.offsetX-start.x,e.offsetY-start.y)
+      }
+    }
+    document.addEventListener("mouseup",function(){
+      if(start){
+        start = null;
+        var url = startClip(clipArea);
+        img.src= url;
+      }
+    })     
+    function fill(x,y,w,h){
+      ctx.clearRect(0,0,width,height);
+      ctx.beginPath();
+      //遮罩层
+      ctx.globalCompositeOperation = "source-over";
+      ctx.fillRect(0,0,width,height);
+      //画框
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillRect(x,y,w,h);
+      //描边
+      ctx.globalCompositeOperation = "source-over";
+      ctx.moveTo(x,y);
+      ctx.lineTo(x+w,y);
+      ctx.lineTo(x+w,y+h);
+      ctx.lineTo(x,y+h);
+      ctx.lineTo(x,y);
+      ctx.stroke();
+      ctx.closePath();
+      clipArea = {
+        x,
+        y,
+        w,
+        h
+      };
+    }
+    function startClip(area){
+      var canvas = document.createElement("canvas");
+      canvas.width = area.w;
+      canvas.height = area.h;
+        
+      var data = clipCtx.getImageData(area.x,area.y,area.w,area.h);
+        
+      var context = canvas.getContext("2d");
+      context.putImageData(data,0,0);
+      return canvas.toDataURL("image/png");
+    }       
+  </script>
+</html>

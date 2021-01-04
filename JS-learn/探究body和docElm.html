@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+            margin: 0;
+        }
+        .fill{
+            padding-top: 100vh;
+        }
+        .overflow-1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fill">
+
+    </div>
+    <div class="overflow-1">
+        溢出
+    </div>
+    <script>
+        var dom = document.getElementsByClassName('overflow-1')[0];
+
+        function look() {
+            var bodyHeight = document.body.clientHeight;
+            var documentClientHeight = document.documentElement.clientHeight;
+            console.log('bodyHeight: ' + bodyHeight);
+            console.log('documentClientHeight: ' + documentClientHeight)
+        }
+
+        window.onresize = function(){
+            look();
+        }
+        window.onscroll = function(){
+            var scrollBody = document.body.scrollTop;
+            var scrollDoc = document.documentElement.scrollTop;
+            console.log('domOffset: '+dom.offsetTop);
+            console.log('scrollBody: ' + scrollBody);
+            console.log('scrollDoc: ' + scrollDoc)
+        }
+        
+    </script>
+</body>
+
+</html>

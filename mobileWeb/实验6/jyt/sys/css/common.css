@@ -1,0 +1,31 @@
+body {
+    font-family: Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3b3b3b;
+    margin:0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.c-light {
+  color: #e5f2e9;
+}
+
+.c-dark {
+  color: #4ca391;
+}
+
+.b-light {
+  background: #e5f2e9;
+}
+
+.b-dark {
+  background: #4ca391;
+}

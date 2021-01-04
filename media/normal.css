@@ -1,0 +1,14 @@
+/* 很小的设备（手机等，小于 600px） */
+@media only screen and (max-width: 600px) { }
+
+/* 比较小的设备（竖屏的平板，屏幕较大的手机等, 大于 600px） */
+@media only screen and (min-width: 600px) { }
+
+/* 中型大小设备（横屏的平板, 大于 768px） */
+@media only screen and (min-width: 768px) { }
+
+/* 大型设备（电脑, 大于 992px） */
+@media only screen and (min-width: 992px) { }
+
+/* 超大型设备（大尺寸电脑屏幕, 大于 1200px） */
+@media only screen and (min-width: 1200px) { }

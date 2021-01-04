@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 10000;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: #ff852a;
+  padding: 7px 9px 7px 0px;
+  height: 40px;
+}
+.header .header-logo {
+  flex: 1;
+  margin-left: 2px;
+  margin-right: 5px;
+  background-image: url(http://img.alicdn.com/tfs/TB1qpwlQXXXXXcCXXXXXXXXXXXX-256-256.png_60x60.jpg_.webp);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 9px center;
+}
+.header .header-input {
+  flex: 9;
+}
+.header .header-input a {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  background-color: #ff4e22;
+  border-radius: 4px;
+}
+.header .header-input a .icon-search {
+  display: inline-block;
+  color: white;
+  padding: 2px;
+  margin: auto;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+.body {
+  padding-top: 40px;
+}
+.body .swiper-container {
+  height: 120px;
+}
+.body .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.body .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.body .swiper-container .swiper-wrapper a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  z-index: 100;
+}
+.body .swiper-container .swiper-wrapper a img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.body .swiper-block {
+  height: 10px;
+  box-sizing: border-box;
+  border-radius: 15% 15% 0 0;
+  background-color: yellow;
+  z-index: 1000;
+  margin-top: -10px;
+}
+.body .icon-componet {
+  display: flex;
+  flex-direction: row;
+}
+.body .icon-componet .icon-wrapper {
+  margin-left: 2%;
+  width: 20%;
+  box-sizing: border-box;
+}
+.body .icon-componet .icon-wrapper .icon-top,
+.body .icon-componet .icon-wrapper .icon-down {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  margin-top: 3px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.body .icon-componet .icon-wrapper .icon-top img,
+.body .icon-componet .icon-wrapper .icon-down img {
+  height: auto;
+  width: 100%;
+}
+.body .icon-componet .icon-wrapper .icon-top p,
+.body .icon-componet .icon-wrapper .icon-down p {
+  font-size: 11px;
+  line-height: 15px;
+  color: #666666;
+  margin-top: 4px;
+}
+.body .progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+.body .progress div {
+  box-sizing: border-box;
+  margin-top: 5px;
+  height: 3px;
+  width: 20%;
+  background: #ff852a;
+  border-radius: 25%;
+}
+.body .under-body {
+  background: #f5f3f3;
+  padding-bottom: 3.75em;
+}
+.body .under-body .may-like .like-title {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  width: 40%;
+  margin: 0 auto;
+}
+.body .under-body .may-like .like-title img {
+  width: 100%;
+}
+.body .under-body .may-like .like-body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.body .under-body .may-like .like-body .like-card {
+  margin: 0.2em;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 5%;
+  width: 47%;
+  height: auto;
+}
+.body .under-body .may-like .like-body .like-card .msg-img {
+  width: 100%;
+  height: auto;
+}
+.body .under-body .may-like .like-body .like-card .msg-img img {
+  width: 100%;
+  border-radius: 5% 5% 0 0;
+}
+.body .under-body .may-like .like-body .like-card .msg-body {
+  box-sizing: border-box;
+  padding: 0.5em;
+  padding-bottom: 0;
+  font-size: 0.81rem;
+  line-height: 1.17rem;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 0.5em;
+  margin-top: 0;
+}
+.body .under-body .may-like .like-body .like-card .msg-end {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0.5em;
+  margin-right: 0.2rem;
+  padding: 0.5em;
+  font-size: 0.77rem;
+  color: #999999;
+}
+.body .under-body .may-like .like-body .like-card .msg-end span:nth-child(1) {
+  color: #ff5500;
+}
+.body .under-body .may-like .like-body .like-card .msg-end span:nth-child(2) {
+  font-size: 1.1rem;
+  color: #ff5500;
+}

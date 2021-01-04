@@ -1,0 +1,19 @@
+{{for lists}}
+<div class="home-info">
+    {{if #index%2}}
+    <div class="m-view-inner">
+    {{else}}
+    <div class="m-view-inner  reverse">
+    {{/if}}
+        <div class="m-info-graph">
+            <img src="{{:imgurl}}" alt="">
+        </div>
+        <div class="m-info-content">
+            <h2>{{:title}}</h2>
+            {{for content}}
+            <p>{{:#data}}</p>
+            {{/for}}
+        </div>
+    </div>
+</div>
+{{/for}}

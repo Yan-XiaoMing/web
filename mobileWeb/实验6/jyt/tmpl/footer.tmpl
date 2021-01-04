@@ -1,0 +1,21 @@
+<div class="g-wrapper">
+    <div class="m-menu">
+        {{for navs}}
+        <li class="grid_5 {{:dispaly}}">
+            <h4><a>{{:name}}</a></h4>
+            {{if lists}}
+            <ul class="items">
+                {{for lists}}
+                <li><a href="#">{{: #data}}</a></li>
+                {{/for}}
+            </ul>
+            {{/if}}
+        </li>
+        {{/for}}
+    </div>
+    <div class="m-info">
+        <a class="footer-logo" href="/"></a>
+        <p class="footer-title">Copyright © 2017<br>{{:company}}</p>
+        <p>咨询电话：{{:cphone}}<br>客服电话：{{:sphone}}<br>微信公众号：{{:weixin}}<br>邮箱：{{:email}}</p>
+    </div>
+</div>

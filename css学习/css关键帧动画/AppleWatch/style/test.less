@@ -1,0 +1,119 @@
+// .wege{
+//     border-radius: 0 4em 4em 0;
+//     background: red;
+//     width: 2em;
+//     height: 4em;
+//     transform-origin: 0% 50%;
+//     animation: rorate 5s infinite  linear;
+// }
+
+// .origin{
+//     margin-left: 2em;
+//     margin-bottom: 2em;
+// }
+
+// .dial-container{    
+//     margin-left: 2em;
+//     width: 2em;
+//     height: 4em;
+//     overflow: hidden;
+// }
+
+// .dialF-container{    
+//     margin-left: 2em;
+//     width: 2em;
+//     height: 4em;
+//     overflow: hidden;
+//     position: relative;
+// }
+
+// .wegeF{
+//     position: absolute;
+//     right: -100%;
+// }
+
+// @keyframes rorate{
+//     100%{
+//         transform: rotateZ(360deg);
+//     }
+// }
+
+.wrapper {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    left: calc(50% - 2em);
+  }
+  .dial-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 2em;
+  }
+  .wedge {
+    background: red;
+    height: 4em;
+    width: 2em;
+  }
+  .container1 {
+    left: 2em;
+  }
+  .container1 .wedge {
+    animation: rotate-bg-1 4s infinite linear;
+    border-radius: 0 4em 4em 0;
+    left: 0;
+    transform-origin: 0 50%;
+  }
+  .container2 {
+    left: 0;
+  }
+  .container2 .wedge {
+    animation: rotate-bg-2 4s infinite linear;
+    border-radius: 4em 0 0 4em;
+    transform-origin: 2em 2em;
+  }
+
+  .clothes{
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      left: 0.5em;
+      top: 0.5em;
+      width: 3em;
+      height: 3em;
+  }
+  .marker {
+    background: red;
+    border-radius: 50%;
+    height: 0.5em;
+    width: 0.5em;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 0.25em);
+  }
+  .end{
+      animation: rotate-marker 4s infinite linear;
+      transform-origin: 50% 2em;
+  }
+
+  /* First animation moves 180 degrees in the first 2 seconds */
+  @keyframes rotate-bg-1 {
+    50%, 100% {
+      transform: rotateZ(180deg);
+    }
+  }
+  /* Second animation moves 180 degrees in the last 2 seconds */
+  @keyframes rotate-bg-2 {
+    0%, 50% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(180deg);
+    }
+  }
+  @keyframes rotate-marker {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }

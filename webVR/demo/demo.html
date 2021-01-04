@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webDemo</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="iframe-warpper">
+    </div>
+    <script>
+        let iframe = document.createElement('iframe')
+        iframe.id = 'iframe'
+        iframe.src = "https://vr.realsee.cn/vr/6gyq3v1NRYaD7JO1/QJyOozqughrg2bdqVD9DsOckg6ZYcDL9/?refer_from=vrcapp_edit#lianjia"
+        let parentDomain = window.location.hostname
+        document.domain = parentDomain;
+        let wrapper = document.getElementsByClassName('iframe-warpper')[0]
+        console.log(wrapper)
+        wrapper.appendChild(iframe)
+        iframe.onload = function(){
+            console.log('onload')
+            handleDelete()
+        }
+        function handleDelete(){
+            let iframe = document.getElementById('iframe')
+            // console.log(iframe.contentWindow)   
+            // console.log(iframe.contentWindow)   
+            let front = document.getElementById('front')
+           
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+img{
+    position: absolute;
+    width: 1400px;
+    opacity: 0.3;
+}
+.header-up-block{
+    height: 18px;
+}
+.header{
+    text-transform: uppercase;
+    color: inherit;
+    font-family: 'Lucida Sans';
+    font-size: 18px;
+    
+}
+.header-down-block{
+    height: 18px;
+    border-bottom:  1px solid rgba(0, 0,0,.1);
+}
+
+.body-up-block{
+    height: 43px;
+  
+}
+#up-title-block{
+    height: 3px;
+}
+.up-title p{
+    font-weight:500;
+    margin: 0;
+    font-size: 17px;
+    color: rgba(0, 0,0,.5);
+}
+#title-block{
+    height: 8px;
+}
+.title{
+    font-family:medium-content-sans-serif-font ;
+    line-height: 28px;
+    text-transform: capitalize;
+}
+.title h2{
+    margin: 0;
+}
+.msg{
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: .7px;
+}
+#msg-down-block{
+    height: 7px;
+}
+.msg-down{
+    font-family:medium-content-sans-serif-font ;
+}
+.msg-down p{
+    margin:0;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+
+
+#star-block{
+    height: 5px;
+}
+.star p{
+    margin: 0;
+    font-size: 16px;
+    /* color: rgba(0, 0,0,.054); */
+}
+.left{
+    width: 60%;
+    display: inline-block;
+}
+
+.card{
+    width: 75%;
+    position: relative;
+    min-height: 28vh;
+}
+
+.card-msg{
+    text-align: left;
+    text-indent: 85px;
+}
+
+.card-left{
+   position: absolute;
+   width: 100%;
+}
+.card-right{
+    margin-left: 112%;
+}
+
+.card-down{
+    display: inline-block;
+}
+
+.icon-wrapper{
+   float: right;
+   margin-top: 25px;
+}
+.icon{
+    float: right;
+}
+.icon>span{
+    margin-right: 5px;
+}
+.icon>span>i{
+    font-size: 27px!important;
+}
+
+.card-right img{
+    width: 175px;
+    height: 176.68px;
+    opacity: 1;
+}
+.right{
+    display: inline-block;
+    position: fixed;
+    margin-left: 130px;
+}
+.right .right-title h2{
+    font-size: 24px;
+    font-weight: 600;
+    padding:15px;
+    margin-right: 16%;
+    border-bottom: 1px solid rgba(0,0,0,.15)
+}
+.right-list{
+    list-style: none;
+    padding: 25px;
+}
+ol li{
+    min-height: 21vh;
+    margin-bottom: 10px;
+}
+ol li::after{
+    
+    clear: left;
+}
+.list-left{
+    float: left;
+    min-height: 21vh;
+    margin-right: 16px;
+    font-size: 34px;
+    color: rgba(0,0,0,.15);
+    fill: rgba(0,0,0,.15);
+}
+.list-right{
+    width: 86%;
+    
+}
+.list-body{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.list-right h2{
+    margin: 0;
+}
+
+.foot-body{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+.foot-star{
+    color: rgba(0,0,0,.54);
+    fill: rgba(0,0,0,.54);
+}
+.foot-star p{
+    margin: 0;
+}
