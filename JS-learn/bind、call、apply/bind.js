@@ -50,3 +50,17 @@ Function.prototype.bind2 = function(context){
         return self.apply(context,args.concat(bindArgs))      
     }
 }
+
+//第三版
+Function.prototype.bind3 = function(ccontext) {
+    if(typeof this !== 'function'){
+        throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
+    }
+    var self = this
+    var args = Array.prototype.slice.call(arguments,1)
+
+    var fNOP = function(){
+        var bindArgs = Array.prototype.slice.call(arguments)
+    
+    }
+}
