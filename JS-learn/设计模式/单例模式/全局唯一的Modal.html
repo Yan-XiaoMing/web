@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单例模式弹框</title>
+</head>
+<body>
+    <button id="open">打开弹框</button>
+    <button id="close">关闭弹框</button>
+</body>
+<script>
+    const Modal = (function(){
+        let modal = null
+        return function(){
+            if(!modal){
+                modal = document.createElement('div')
+                modal.innerHTML = '我是全局唯一的modal'
+                modal.id = 'modal'
+                modal.style.display = 'none'
+                document.body.appendChild(modal)
+            }
+            return modal
+        }
+    })()
+    document.getElementById('open').addEventListener('click',function(){
+        const modal = new Modal()
+        if(modal){
+            modal.style.display = 'block'
+        }
+    })
+    document.getElementById('close').addEventListener('click',function(){
+        const modal = new Modal()
+        if(modal){
+            modal.style.display = 'none'
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,64 @@
+.solid{
+    position: relative;
+    width: 600px;
+    height: 100px;
+    margin: 5vmin auto 10vmin;
+    background: hsl(48, 100%, 50%);
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px hsl(48,100%,45%);
+}
+
+.g-left::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    border-radius: 10px;
+    background: hsl(48,100%,20%);
+    transform: translate(0,-15%) rotate(-4deg);
+    transform-origin: center center;
+    box-shadow: 0 0 20px 15px  hsl(48, 100%, 20%);
+    z-index: -1;
+}
+
+.g-both {
+    background: hsl(199, 98%, 48%);
+    box-shadow: 0 0 5px 2px hsl(199, 98%, 40%);
+}
+
+.g-both::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    bottom: 15%;
+    border-radius: 10px;
+    background: hsl(199,98%,20%);
+    transform: translate(0,-20%) rotate(-4deg);
+    transform-origin: center center;
+    box-shadow: 0 0 20px 15px hsl(199, 98%, 20%);
+    z-index: -1;
+}
+
+.g-both::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    bottom: 15%;
+    border-radius: 10px;
+    background: hsl(199, 98%, 20%);
+    transform: translate(0, -20%) rotate(4deg);
+    transform-origin: center center;
+    box-shadow: 0 0 20px 15px hsl(199, 98%, 20%);
+    z-index: -1;
+}
+
+.g-slide {
+    background: hsl(150, 62%, 52%);
+    box-shadow: 0 0 5px 2px hsl(150, 62%, 40%);
+}
