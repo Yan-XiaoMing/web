@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="open">打开弹框</button>
+    <button id="close">关闭弹框</button>
+</body>
+<script>
+    const Modal = (function(){
+        let modal = null
+        return function(){
+            if(!modal){
+                modal = document.createElement('div')
+                modal.innerHTML = '全局唯一的modal'
+                modal.style.display = 'none'
+                modal.id = 'modal'
+                document.body.appendChild(modal)
+            }
+        }
+    })()
+    const open = document.getElementById('open')
+    const close = document.getElementById('close')
+
+    function openModal(){
+        const modal = new Modal()
+        modal.style.display = 'block'
+    }
+
+    function changeButtonText(){
+        open.innerText = '快去登录'
+    }
+
+    function disableButton(){
+        open.setAttribute('disabled',true)
+    }
+
+    function changeButtonStatus(){
+        changeButtonText()
+        disableButton()
+    }
+
+    open.addEventListener('click',function(){
+        openModal()
+        changeButtonStatus()
+    })
+</script>
+</html>
