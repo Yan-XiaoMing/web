@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#1">1</a>
+    <a href="#2">2</a>
+    <a href="#3">3</a>
+    <button onclick="r.back()">后退</button>
+    <button onclick="r.forward()">前进</button>
+</body>
+<script>
+    const addEvent = (function(){
+        if(window.addEventListener){
+            return function(ele,event,handle,isBunble){
+                isBunble = isBunble || false
+                ele.addEventListener(event,handle,isBunble)
+            }
+        }else if(window.attachEvent){
+            return function(ele,event,handle){
+                ele['on'+event] = handle
+            }
+        }
+        else{
+            return function (ele,event,handle){
+                ele['on'+event] = handle
+            }
+        }
+    })
+    console.log(addEvent)
+    class Router{
+        constructor(){
+            this.routes = {}
+            this.currentUrl = '/'
+            this.pre = this.pre || '/'
+            this.next = this.next || '/'
+            addEvent(window,'load',()=>{
+                this.updateUrl()
+            })
+            addEvent(window,'hashchange',()=>{
+                this.pre = this.currentUrl
+                this.updateUrl()
+            })
+        }
+        
+        route(path,cb){
+            this.routes[path] = cb || function(){}
+        }
+        updateUrl(){
+            this.currentUrl = window.location.hash.slice(1) || '/'
+        }
+        back(){
+            console.log(this.currentUrl)
+            if(!this.currentUrl){
+                return
+            }
+            this.next = this.currentUrl
+            window.location.hash = '#' + this.pre
+        }
+        forward(){
+            if(!this.next){
+                return
+            }
+            window.location.hash = '#'+ this.next
+        }
+    }
+    const r = new Router()
+</script>
+</html>
