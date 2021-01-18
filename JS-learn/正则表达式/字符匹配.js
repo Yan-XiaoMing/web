@@ -81,3 +81,15 @@ console.log( regex.test("F:\\study\\javascript\\regex\\regular expression.pdf") 
 console.log( regex.test("F:\\study\\javascript\\regex\\") );
 console.log( regex.test("F:\\study\\javascript") );
 console.log( regex.test("F:\\") );
+
+
+//匹配颜色
+var regex = /#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})/
+var string = '#fff #abcfff #672212'
+console.log(string.match(regex))
+
+//匹配时间
+var regex = /^([01][0-9]|[2][0-3]):[0-5][0-9]$/
+
+//匹配日期
+var regex = /^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/
