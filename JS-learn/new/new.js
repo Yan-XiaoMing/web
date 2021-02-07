@@ -14,7 +14,6 @@ function create(){
     /*
         构造函数 new -> 实例对象 
         实例对象.__proto__ === 构造函数.prototype === 原型对象
-
     */
     obj.__proto__ = con.prototype
     let result = con.apply(obj,arguments)
