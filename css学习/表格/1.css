@@ -1,0 +1,32 @@
+.table {
+  display: table;
+  border: 1px solid #aaa;
+}
+.table nav {
+  display: table-caption;
+  text-align: center;
+  background: black;
+  color: #fff;
+  padding: 10px;
+}
+.table section:nth-of-type(1) {
+  font-weight: bold;
+  display: table-header-group;
+  background: #555;
+  color: white;
+}
+.table section:nth-of-type(2) {
+  display: table-row-group;
+}
+.table section:nth-of-type(3) {
+  display: table-footer-group;
+  background: #f3f3f3;
+}
+.table section ul {
+  display: table-row;
+}
+.table section ul li {
+  padding: 10px;
+  display: table-cell;
+  border: solid 1px #ddd;
+}

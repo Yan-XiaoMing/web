@@ -1,0 +1,32 @@
+.border-animation {
+  position: relative;
+  border: 1px solid #03A9F3;
+  width: 250px;
+  height: 150px;
+  cursor: pointer;
+}
+.border-animation::before,
+.border-animation::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s ease-in-out;
+}
+.border-animation::before {
+  top: -5px;
+  left: -5px;
+  border-top: 1px solid #03A9F3;
+  border-left: 1px solid #03A9F3;
+}
+.border-animation::after {
+  right: -5px;
+  bottom: -5px;
+  border-bottom: 1px solid #03A9F3;
+  border-right: 1px solid #03A9F3;
+}
+.border-animation:hover::before,
+.border-animation:hover::after {
+  width: calc(100% + 9px);
+  height: calc(100% + 9px);
+}
