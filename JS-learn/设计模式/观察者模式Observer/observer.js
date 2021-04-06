@@ -56,3 +56,17 @@ sub.add(obs1)
 sub.add(obs2)
 sub.remove(obs2)
 sub.noyify()
+
+function Subject(){
+    this.observers = []
+}
+
+Subject.prototype = {
+    add(observer){
+        this.observers.push(observer)
+    },
+    notify(){
+        let observers = this.observers
+        for(
+    }
+}

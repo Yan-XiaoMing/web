@@ -1,0 +1,15 @@
+.App {
+  height: 100%;
+  padding: 20px 5%;  
+}
+.form-wrapper{
+  margin-top: 20px;
+}
+.code-wrapper .ant-form-item-control-input-content{
+  display: flex;
+}
+.button-wrapper{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
