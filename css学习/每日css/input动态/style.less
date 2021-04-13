@@ -1,0 +1,48 @@
+@radioDur: 0.2s;
+@timing1: cubic-bezier(0.45,0.05,0.55,0.95);
+@timing2: cubic-bezier(0.5,0,0.5,2);
+@radios: 3;
+@wormDur: 0.4s;
+@shadowColor:rgba(0,0,0,0.2);
+
+*{
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+:root{
+    font-size: calc(32px + (40 - 32)*(100vw - 320px)/ (1024 - 320))
+}
+body{
+    background: #e3e4e8;
+    color: #17181c;
+    display: flex;
+    height: 100vh;
+    line-height: 1.5;
+    padding: 1.5em 0;
+}
+
+form{
+    display: block;
+    margin: auto;
+    max-width: 10em;
+    position: relative;
+}
+
+input{
+    position: fixed;
+    top:-1.5em;
+    left: -1.5em;
+}
+
+label{
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    text-shadow: 0 0.1em 0.1em @shadowColor;
+    transition: color @radioDur @timing1;
+    &:not(:last-of-type){
+        
+    }
+}
