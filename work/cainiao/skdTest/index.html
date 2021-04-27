@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>cone-lowcode-engine</title>
+    <link rel="shortcut icon" href="//img.alicdn.com/tfs/TB10uQ9KrvpK1RjSZFqXXcXUVXa-32-34.png" />
+    <link href="//g.alicdn.com/code/lib/alifd__next/1.22.11/next.css" rel="stylesheet" />
+    <link href="//g.alicdn.com/code/npm/@alife/cone-lowcode-engine/0.1.1/cone-lowcode-engine.css" rel="stylesheet" />
+</head>
+
+<body>
+    <script>
+        window.pageConfig = {
+            device: 'PC',
+        }
+    </script>
+    <!-- 使用单独的 script 来加载 react, 这样可以代理到 development 版本来调试 -->
+    <script crossorigin="anonymous" src="//g.alicdn.com/code/lib/react/16.14.0/umd/react.production.min.js"></script>
+    <script crossorigin="anonymous"
+        src="//g.alicdn.com/code/lib/react-dom/16.14.0/umd/react-dom.production.min.js"></script>
+    <!-- 一些常用的三方库 cdn, visualengine-utils 5.x 依赖 babel-standalone -->
+    <script crossorigin="anonymous"
+        src="//g.alicdn.com/code/lib/??prop-types/15.7.2/prop-types.js,lodash.js/4.17.21/lodash.js,moment.js/2.24.0/moment.js,babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- 三方库里面没有的 cdn -->
+    <script crossorigin="anonymous"
+        src="//g.alicdn.com/toffee/c/??react15-polyfill/0.0.1/dist/index.js,tinymce/tinymce-full.min.js"></script>
+    <!-- 引擎 cdn -->
+    <script crossorigin="anonymous" src="//g.alicdn.com/vision/visualengine/5.3.0/engine.min.js"></script>
+    <script crossorigin="anonymous" src="//g.alicdn.com/vision/visualengine-utils/4.3.1/engine-utils.min.js"></script>
+    <script crossorigin="anonymous" src="//g.alicdn.com/code/lib/alifd__next/1.22.11/next.js"></script>
+    <script src="//g.alicdn.com/code/npm/@alife/cone-lowcode-engine/0.1.1/cone-lowcode-engine.js"></script>
+    <script>
+        const { ConeLowcodeEngine } = window
+        const {
+            initEngine,
+            pluginLogo,
+            pluginPageNavigation,
+            pluginI18nPane,
+            pluginSimulator,
+            pluginSaveButton,
+            pluginJointTuningButton,
+            pluginPreviewButton,
+            pluginHistory,
+            pluginQuickSearch,
+            pluginHelpButton,
+            pluginTrunkPane,
+            pluginDatapoolPane,
+            pluginActionPane,
+            pluginSourceCode,
+            pluginTreePane,
+            pluginGlobalActionReplaceForm,
+            pluginGlobalActionSplitColumn,
+        } = ConeLowcodeEngine
+
+        function getNowSchema(){
+
+        }
+
+        function saveFuc(schema, props, startLoading, stopLoading) {
+            console.log('save schema, 需返回一个 promise', schema)
+            return Promise.resolve(42)
+        }
+
+        function initJointTuning({ env }) {
+            console.log('这里可以初始化联调所需要的数据', env)
+        }
+
+        function onJointTuning({ env }) {
+            console.log('点击联调按钮', env)
+        }
+
+        function savePreviewSchema(schema) {
+            console.log(
+                '保存用于 preview 的 schema, 可以存到 localStorage 里面, 在 schema 发生变化的时候会被调用, 所以会被多次调用',
+                schema,
+            )
+            localStorage.setItem(`toffee-preview-toffee-list`, JSON.stringify(schema));
+        }
+
+        function onPreview({ type }) {
+            let schema = JSON.parse(localStorage.getItem('toffee-preview-toffee-list'))
+            console.log(schema)
+            console.log('点击预览按钮', type)
+            window.ConeLowcodeEngine.preview({
+                device: window.pageConfig.device,
+                assets: schema.bizComponents,
+                schema,
+                container: 'J_root',
+            });
+        }
+
+        // 初始化引擎
+        initEngine({
+            // PC or H5
+            device: 'PC',
+            // 组件列表
+            assets: [
+                {
+                    scope: 'alife',
+                    name: 'cone-zyy-test-c',
+                    version: '0.1.0',
+                    group: 'def',
+                    cdnVersion: 'dev',
+                },
+            ],
+            // 搭建产出的 schema
+            schema: {},
+            plugins: [
+                /*
+                 * ActionPane
+                 */
+                // left
+                pluginLogo,
+                [
+                    pluginPageNavigation,
+                    {
+                        items: [
+                            { text: 'home', url: 'https://cone.alibaba-inc.com/' },
+                            { text: 'page' },
+                        ],
+                    },
+                ],
+                // middle
+                pluginI18nPane,
+                pluginSimulator,
+                // right (reverse order)
+                [
+                    pluginSaveButton,
+                    {
+                        isBack: true,
+                        saveFuc,
+                        name: 'backSaveBtn',
+                    },
+                ],
+                [
+                    pluginSaveButton,
+                    {
+                        saveFuc,
+                        name: 'saveBtn',
+                        bindShortCut: true,
+                    },
+                ],
+                [pluginJointTuningButton, { initJointTuning, onJointTuning }],
+                [
+                    pluginPreviewButton,
+                    {
+                        savePreviewSchema,
+                        onPreview,
+                    },
+                ],
+                pluginHistory,
+                pluginQuickSearch,
+                pluginHelpButton,
+                /*
+                 * DockPane
+                 */
+                pluginTrunkPane,
+                pluginDatapoolPane,
+                pluginActionPane,
+                [
+                    pluginSourceCode,
+                    {
+                        saveFuc: (schema) => {
+                            return saveFuc(
+                                schema,
+                                { hideSaveTip: true },
+                                () => { },
+                                () => { },
+                            )
+                        },
+                    },
+                ],
+                /**
+                 * misc
+                 */
+                pluginTreePane,
+                pluginGlobalActionReplaceForm,
+                pluginGlobalActionSplitColumn,
+            ],
+        })
+       
+    </script>
+</body>
+
+</html>
