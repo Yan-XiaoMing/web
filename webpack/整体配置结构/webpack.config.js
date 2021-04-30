@@ -57,6 +57,56 @@ module.exports = {
 
     //配置模块相关
     module:{
-        
+        rules:[//配置loader
+            {
+                test:/\.jsx?$/,//正则匹配命中要使用Loader的文件
+                include: [//只会命中这里面的文件
+                    path.resolve(__dirname,'app')
+                ],
+                exclude:[// 忽略这里面的文件
+                    path.resolve(__dirname,'app/demo-files')
+                ],
+                use:[//使用哪些loader,有先后次序,从后往前执行
+                    'style-loader',//直接使用loader的名称
+                    {
+                        loader:'css-loader',
+                        options:{ //给loader传些参数
+
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    plugins:[
+
+    ],
+
+    //配置寻找模块的规则
+    resolve:{
+        modules:[ //寻找模块的根目录,array类型,默认以node_modules为根目录
+            'node_modules',
+            path.resolve(__dirname,'app')
+        ],
+        extensions:['.js','.json','.jsx','.css'],//模块的后缀名
+        alias:{ //模块别名配置,用于映射模块
+            //把 'module' 映射 'new-module',同样的'module/path/file'也会被映射成'new-module/path/file'
+            'module':'new-module',
+            //使用结尾符号 $ 后,把'only-module' 映射成 'new-module',
+            //但是不像上面的,'module/path/file'不会被映射成 'new-module/path/file'
+            'only-module$':'new-module'
+        },
+        alias: [ // alias 还支持使用数组来更详细的配置
+            {
+                name:'module',//老的模块
+                alias:'new-module',//新的模块
+                //是否是只映射模块,如果是true只有'module'会被映射,如果是false 'module/inner/path' 也会被映射
+                onlyModule: true,
+            }
+        ],
+        symlinks: true, // 是否跟随文件软链接去搜寻模块的路径
+        descriptionFiles: ['package.json'], // 模块的描述文件
+        mainFields: ['main'], // 模块的描述文件里的描述入口的文件的字段名称
+        enforceExtension: false, // 是否强制导入语句必须要写明文件后缀
     }
 }

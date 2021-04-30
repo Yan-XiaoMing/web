@@ -10,6 +10,7 @@ console.log(result);
 #javascript#
 */
 
+//  \b是单词边界 \B是非单词边界
 var result = "[JS] Lesson_01.mp4".replace(/\b/g, '#');
 console.log(result);
 //"[#JS#] #Lesson_01#.#mp4#"
