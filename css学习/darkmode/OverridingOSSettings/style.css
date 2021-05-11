@@ -1,0 +1,30 @@
+body {
+  --text-color:#222;
+  --bkg-color:#fff;
+}
+
+body.dark-theme {
+  --text-color:#eee;
+  --bkg-color:#121212;
+}
+
+@media (perfers-color-scheme: dark) {
+  body {
+    --text-color:#eee;
+    --bkg-color:#121212
+    ;
+  }
+  body.light-theme {
+    --text-color:#222;
+    --bkg-color:#fff;
+  }
+}
+
+body {
+  background: var(--bkg-color);
+}
+
+h1, p {
+  color: var(--text-color);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darkmode separate stylesheets</title>
+    <link rel="stylesheet" href="style.css" type="text/css" id="theme-link">
+</head>
+
+<body>
+    <h1>Hey there! This is just a title</h2>
+    <p>I am just a boring text, existing here solely for the purpose of this demo</p>
+    <p>And I am just another one like the one above me, because two is better than having only one</p>
+    <a href="#">I am a link, don't click me!</a>
+</body>
+<script>
+    const perfersDarkScheme = window.matchMedia("(prefers-color-scheme:dark)")
+    if(perfersDarkScheme.matches){
+        document.body.classList.add('dark-theme')
+    }else{
+        document.body.classList.remove('dark-theme')
+    }
+</script>
+</html>

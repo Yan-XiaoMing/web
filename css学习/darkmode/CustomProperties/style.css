@@ -1,0 +1,21 @@
+body {
+  --text-color:#222;
+  --bkg-color:#fff;
+  --anchor-color:#0033cc;
+}
+
+body.dark-theme {
+  --text-color:#eee;
+  --bkg-color:#121212;
+  --anchor-color:#809fff;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bkg-color);
+}
+
+a {
+  color: var(--anchor-color);
+}
+/*# sourceMappingURL=style.css.map */
