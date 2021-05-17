@@ -1,0 +1,66 @@
+.first{
+    display: grid;
+    height: 400px;
+    // background: #48dbfb;
+    grid-template-rows: repeat(3,33.3%);
+    // grid-template-rows: repeat(3,33.3%);
+    // grid-template-columns: repeat(2, 100px 20px 80px);
+    grid-template-columns:  [line1] 200px [line2] 3fr [line3] 1fr [line4] 2fr [line5];
+    
+    // grid-row-gap: 10px;
+    // grid-column-gap: 20px;
+    // grid-gap: 10px 20px;
+    gap: 10px 20px;
+
+    /*
+        1.将单元格写成相同的名字就可以合并区域
+        2.如果某些区域不需要利用，则使用"点"（.）表示。
+    */
+    grid-template-areas: 
+        'header header header header'
+        'main main . sidebar' 
+        'footer footer footer footer';
+
+    //容器的子元素(项目）会按照顺序，
+    //自动放置在每一个网格。默认的放置顺序是"先行后列"，即先填满第一行，再开始放入第二行。
+    //grid-auto-flow决定放置顺序，默认值是row
+    // grid-auto-flow: column ;
+    // grid-auto-flow: column dense;//dense表示紧密排列尽量不出现空隙
+    //place-items决定项目的水平和垂直位置，是justify-items（水平位置） 属性、align-items（垂直位置） 属性的合并缩写
+    /*
+        start：对齐单元格的起始边缘。
+        end：对齐单元格的结束边缘。
+        center：单元格内部居中。
+        stretch：拉伸，项目大小没有指定时-占满单元格的整个宽度（默认值）。
+    */
+    place-items: center center;
+    //等价于
+    justify-items: center;
+    align-items: center;
+    
+    .header{
+        width: 100%;
+        height: 100%;
+        grid-area: header;
+        background: #48dbfb;
+        place-self:center center
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+        background: #feca57;
+        grid-area: main;
+    }
+    .sidebar{
+        width: 100%;
+        height: 100%;
+        background: #ff6b6b;
+        grid-area: sidebar;
+    }
+    .footer{
+        width: 100%;
+        height: 100%;
+        background: #1dd1a1;
+        grid-area: footer;
+    }
+}
