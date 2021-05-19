@@ -1,0 +1,40 @@
+.card {
+  width: 300px;
+  height: 280px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  * {
+    transition: 1s ease all;
+  }
+  img {
+    width: 300px;
+    height: 224px;
+    object-fit: cover;
+    display: block;
+  }
+  h3 {
+    margin: 0;
+    padding: 12px 12px 48px;
+    line-height: 32px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .focus-content {
+    display: block;
+    padding: 8px 12px;
+  }
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  &:hover,
+  &:focus-within {
+    img {
+      margin-top: -80px;
+    }
+    h3 {
+      padding: 8px 12px 0;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.card {
+  width: 300px;
+  height: 280px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card * {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.card img {
+  width: 300px;
+  height: 224px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  margin: 0;
+  padding: 12px 12px 48px;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.card .focus-content {
+  display: block;
+  padding: 8px 12px;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card:hover img, .card:focus-within img {
+  margin-top: -80px;
+}
+
+.card:hover h3, .card:focus-within h3 {
+  padding: 8px 12px 0;
+}
+/*# sourceMappingURL=style.css.map */
